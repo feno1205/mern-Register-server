@@ -10,7 +10,7 @@ regServer.use(cors())
 regServer.use(express.json())
 regServer.use(router)
 
-const PORT = 3000
+const PORT = 3000 || process.env.PORT
 
 regServer.listen(PORT,()=>{
     console.log(`Server started at port: ${PORT}`);
